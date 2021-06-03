@@ -1,0 +1,157 @@
+@import "vars"
+@import "fonts"
+@import "main.scss"
+@import "libs"
+
+/*==========	user style	==========*/
+body
+	font-family: 'Montserrat Alternates', sans-serif
+
+a
+	transition: .3s
+	color: inherit
+	&:link
+		outline: none 0
+		color: inherit
+		text-decoration: none
+	&:visited
+		outline: none 0
+		color: inherit
+		text-decoration: none
+	&:hover
+		text-decoration: none
+		color: inherit
+	&:active
+		outline: none 0
+		color: inherit
+		text-decoration: none
+
+*
+	transition: inherit
+
+ul
+	margin: 0
+	padding: 0
+	list-style: none
+
+.body
+	background-color: #fff
+	color: #333
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	background: #f6f7fb
+	width: 350px
+	padding: 40px 0
+	&__title
+		font-size: 30px
+		text-align: center
+		padding-bottom: 40px
+		margin-bottom: 40px
+		border-bottom: 1px solid #ddd
+	.main_menu
+		overflow-y: auto
+		max-height: calc(100vh - 200px)
+		&__item
+			overflow: hidden
+			&.active
+				background: #0878e5
+				color: #fff
+			& > a
+				display: block
+				padding: 10px 30px
+				position: relative
+				transition: .2s
+				&::after
+					display: block
+					content: ""
+					position: absolute
+					top: 0
+					left: 0
+					z-index: -1
+					width: 0
+					height: 100%
+					background: #0878e5
+					transition: .2s
+				&:hover
+					color: #fff
+					&::after
+						width: 100%
+			.sub_menu
+				background: #262626
+				color: #fff
+				height: 0
+				&__item
+					&.active
+						& > a
+							&::after
+								width: 100%
+
+					& > a
+						display: block
+						padding: 10px 30px
+						position: relative
+						transition: .2s
+						&::after
+							display: block
+							content: ""
+							position: absolute
+							bottom: 0
+							left: 0
+							z-index: 0
+							width: 0
+							height: 2px
+							background: #0878e5
+							transition: .2s
+						&:hover
+							color: #fff
+							&::after
+								width: 100%
+
+.page
+	margin-left: 350px
+	height: 100vh
+	padding: 50px 0
+	overflow-y: auto
+	&__title
+		font-size: 50px
+		margin-bottom: 50px
+	ul
+		list-style: circle
+		padding-left: 50px
+		margin-bottom: 30px
+	h2
+		margin-top: 30px
+		font-size: 16px
+	strong
+		font-weight: 600
+	table
+		border: 1px solid #eee
+		margin: 30px auto
+		thead
+		tbody
+			th
+				background: rgba(#0878e5, .2)
+				text-align: center
+				padding: 20px
+				font-size: 16px
+				font-weight: 600
+			td
+				padding: 10px
+.img_width
+	width: 100%
+	margin: 20px auto
+.img_height
+	height: 100%
+	display: block
+	margin: 20px auto
+.img_center
+	display: block
+	margin: 20px auto
+
+/*==========	user style	==========*/
+
+@import "media" // Always at the end
