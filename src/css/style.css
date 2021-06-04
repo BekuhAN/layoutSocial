@@ -8142,6 +8142,16 @@ a:active {
   transition: inherit;
 }
 
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: #ddd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0878e5;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
 ul {
   margin: 0;
   padding: 0;
