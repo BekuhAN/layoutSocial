@@ -116,9 +116,90 @@ ul
 	height: 100vh
 	padding: 50px 0
 	overflow-y: auto
+	.dictionary_title
+		font-size: 28px
+		text-align: center
+		margin-bottom: 20px
+		font-weight: 500
+		margin-top: 50px
+	.dictionary_list
+		column-count: 2
+		column-width: 50%
+		ol
+			li
+				margin-bottom: 10px
+	.nav_part
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+		&__item
+			font-size: 20px
+			margin: 0px 5px
+			color: #999
+			&:hover
+				color: #0878e5
 	&__title
 		font-size: 50px
 		margin-bottom: 50px
+	.test_body
+		#quiz
+			width: 50%
+			margin: 0 auto
+			&-start-btn
+				background: #00bfa5
+				padding: 15px 30px
+				display: block
+				width: 280px
+				text-align: center
+				color: #fff	
+				&:hover
+					background: darken(#00bfa5, 20%)
+			&-counter
+				margin-bottom: 10px
+				padding-bottom: 10px
+				text-align: center
+				border-bottom: 2px solid #0878e5
+			.question-container
+				.answers
+					list-style: none
+					padding-left: 0
+					margin-bottom: 20px
+					li
+						a
+							display: block
+							padding: 10px 0 10px 30px
+							&.correct
+								background: #090
+								color: #fff
+							&.incorrect
+								background: #c00
+								color: #fff
+			&-controls
+				padding-top: 10px
+				border-top: 2px solid #0878e5
+				text-align: center
+			&-buttons
+				color: #fff	
+				#quiz-next-btn,#quiz-finish-btn
+					background: #0878e5
+					padding: 15px 30px
+					display: block
+					width: 280px
+					text-align: center
+					margin: 0 auto
+					&:hover
+						background: darken(#0878e5, 20%)
+				#quiz-restart-btn
+					background: #00bfa5
+					padding: 15px 30px
+					display: block
+					width: 280px
+					text-align: center
+					margin: 0 auto
+					&:hover
+						background: darken(#00bfa5, 20%)
+
 	ul
 		list-style: circle
 		padding-left: 50px

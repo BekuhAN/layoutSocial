@@ -69,7 +69,8 @@ gulp.task('js', function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/libs/magnific-popup/jquery.magnific-popup.min.js',
-		'src/js/common.js', // Always at the end
+		'src/libs/quiz/jquery.quiz.js',
+		'src/js/common.js',
 	])
 		.pipe(concat('scripts.min.js'))
 		.pipe(gulp.dest('src/js'))
